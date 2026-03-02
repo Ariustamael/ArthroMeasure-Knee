@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Your custom base styles for the surgical workspace */
+body {
+  margin: 0;
+  background-color: #020617; /* Matches slate-950 */
+  color: #f8fafc;
+  overflow: hidden;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
