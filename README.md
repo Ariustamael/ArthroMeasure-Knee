@@ -3,9 +3,9 @@ ArthroMeasure - Knee
 High-fidelity preoperative TKA planning and alignment analysis suite.
 
 ArthroMeasure - Knee is a high-precision clinical drafting tool designed for orthopaedic surgeons and researchers. It enables detailed analysis of long-axis lower limb radiographs, providing comprehensive alignment phenotyping using the MacDessi CPAK framework while bypassing common hospital IT infrastructure restrictions.
-🖥️ Workspace Operations (The Study Window)
 
-The main viewer is designed for high-magnification precision and flexibility within locked-down clinical environments.
+===
+
 📥 Loading a Case
 
 To bypass hospital firewalls that block standard file uploads, ArthroMeasure supports three import methods:
