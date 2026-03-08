@@ -1,48 +1,76 @@
 # ArthroMeasure - Knee
-**High-fidelity preoperative TKA planning and alignment analysis suite.**
+**High-fidelity TKA preoperative alignment analysis.**
 
 ArthroMeasure - Knee is a high-precision clinical drafting tool designed for orthopaedic surgeons and researchers. It enables the detailed analysis of long-axis lower limb radiographs, moving beyond traditional measurements to provide comprehensive alignment phenotyping using the MacDessi CPAK framework.
 
-## 🚀 Key Features
-*   **Precision Geometry Engine:** Automatic calculation of MFA, AFA, MTA, and Joint Lines using vector dot-product logic.
-*   **MacDessi CPAK Classification:** Real-time assignment of the 9 constitutional phenotypes based on Arithmetic HKA (aHKA) and Joint Line Obliquity (JLO).
-*   **Anatomical Scaling:** Landmark markers are anchored to the image coordinate space, maintaining a consistent 1:1 size ratio with the bone during zoom and pan operations.
-*   **360° Radial Resizer:** Innovative UI allows for smooth, non-restricted scaling of landmarks from any angle.
-*   **Bidirectional Sync:** Hovering over the sidebar landmarks triggers a visual pulse on the corresponding bone point for rapid verification.
+📥 Loading a Case
 
-## 📋 Clinical Workflow
-To ensure maximum geometric accuracy, follow this standardized operational sequence:
+There are three ways to import a radiograph into the workspace:
 
-1.  **Limb Lateralization:** Select the **Left** or **Right** toggle in the sidebar. This calibrates the mathematical logic for aHKA to ensure Varus/Valgus values are correctly signed.
-2.  **Image Import:** Drag and drop a high-resolution long-axis radiograph into the workspace.
-3.  **Landmark Acquisition:** Follow the prompted 10-point clinical sequence:
-    *   **P1:** Center of Femoral Head (best-fit circle).
-    *   **P2 & P3:** Proximal and Distal Femoral Shaft (medullary canal centers).
-    *   **P4:** Femoral Knee Center (intercondylar notch apex).
-    *   **MFC & LFC:** Medial and Lateral Femoral Condyles (most distal points).
-    *   **P5:** Tibial Knee Center (midpoint of tibial spines).
-    *   **MTP & LTP:** Medial and Lateral Tibial Plateaus (articular centers).
-    *   **P6:** Ankle Center (talar dome midpoint).
-4.  **Refinement & Fitting:** 
-    *   **Zoom/Pan:** Use the mouse scroll to zoom and Right-Click + Drag to navigate.
-    *   **Anatomical Scaling:** Grab the radial handle on the perimeter of any point to scale the target marker to match the patient’s anatomy (e.g., fitting the femoral head).
-5.  **Diagnostic Analysis:** Review the automated 7-row clinical table and the dynamic CPAK phenotype classification.
-6.  **Data Export:** Click "Export Study" to copy the full measurement report to the clipboard for clinical notes or research spreadsheets.
+    LOAD STUDY: Click the central dash-box to select a file from your local drive.
 
-## 📐 Clinical Metrics Output
-*   **HKA:** Hip-Knee-Ankle Angle (Mechanical Alignment)
-*   **AMA:** Anatomic-Mechanical Angle (VCA/Jig Planning)
-*   **mLDFA:** Mechanical Lateral Distal Femoral Angle
-*   **mMPTA:** Mechanical Medial Proximal Tibial Angle
-*   **JLCA:** Joint Line Congruency Angle
-*   **aHKA:** Arithmetic HKA (Constitutional/Bony Alignment)
-*   **JLO:** Joint Line Obliquity (Joint Tilt)
+    CAPTURE WINDOW: Click this button to select your PACS window. The app will take a high-resolution snapshot directly from your screen.
 
-## 🛠️ Technical Stack
-*   **Framework:** React 19
-*   **Styling:** Tailwind CSS 4
-*   **Icons:** Lucide-React
-*   **Build Tool:** Vite
+    PASTE (CTRL + V): Use any screen-snip tool (e.g., Win+Shift+S) to copy an image from your PACS, then simply press Ctrl + V anywhere on the app to load it instantly.
 
----
-**Disclaimer:** *ArthroMeasure - Knee is intended for research and educational purposes only. All clinical decisions must be made based on comprehensive professional evaluation by a qualified medical professional.*
+🕹️ Navigation HUD
+
+Once a study is loaded, use these commands to navigate:
+
+    SCROLL: Zoom in/out. Markers scale 1:1 with the image to maintain anatomical accuracy.
+
+    RIGHT-CLICK + DRAG: Pan across the long-axis image.
+
+    360° RADIAL HANDLE: Hover over a marker to see the white resize handle. Drag this handle to fit markers to cortical edges. The handle becomes a "Ghost Handle" (40% translucent) when clicked to ensure the bone remains visible.
+
+🔘 Functional Buttons
+
+    TOP RIGHT (Reset icon): Clears the current study and resets all landmark data, returning you to the load screen for a new case.
+
+    BOTTOM RIGHT (Maximize icon): Instantly resets the zoom and pan to fit the entire radiograph within the viewing window.
+
+📋 Clinical Workflow
+
+    Lateralization: Select Left or Right in the sidebar to calibrate the aHKA mathematical logic.
+
+    Acquisition: Follow the prompted 10-point sequence:
+
+        P1: Center of Femoral Head.
+
+        P2 & P3: Proximal & Distal Femoral Shaft.
+
+        P4: Femoral Knee Center.
+
+        MFC & LFC: Medial & Lateral Femoral Condyles.
+
+        P5: Tibial Knee Center.
+
+        MTP & LTP: Medial & Lateral Tibial Plateaus.
+
+        P6: Ankle Center.
+
+    Analysis: Review the unified 7-row clinical table (HKA, AMA, mLDFA, mMPTA, JLCA, aHKA, JLO).
+
+    Phenotyping: View the automated MacDessi CPAK classification (Type I - IX).
+
+    Export: Click "Export Study" to copy all metrics to the clipboard.
+
+🚀 Technical Innovation
+
+    Anatomical Scaling Engine: Markers stay anchored to the anatomy regardless of zoom level.
+
+    Bidirectional Sync: Hovering over sidebar items highlights bone landmarks for rapid verification.
+
+    Clamped Utility Handles: Resize handles are restricted to a professional 5px-10px range.
+
+🛠️ Technical Stack
+
+    Framework: React 19
+
+    Styling: Tailwind CSS 4
+
+    Icons: Lucide-React
+
+    Build Tool: Vite
+
+Disclaimer: ArthroMeasure - Knee is intended for research and educational purposes only. All clinical decisions must be made based on comprehensive professional evaluation by a qualified medical professional.
