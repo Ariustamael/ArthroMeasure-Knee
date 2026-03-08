@@ -1,57 +1,98 @@
-# ArthroMeasure - Knee
-**High-fidelity TKA preoperative alignment analysis.**
+ARTHROMEASURE - KNEE
+Preoperative TKA Planning & Alignment Analysis Suite
 
-ArthroMeasure - Knee is a high-precision clinical drafting tool designed for orthopaedic surgeons and researchers. It enables the detailed analysis of long-axis lower limb radiographs, moving beyond traditional measurements to provide comprehensive alignment phenotyping using the MacDessi CPAK framework.
+ArthroMeasure - Knee is a high-precision clinical drafting tool designed for
+orthopaedic surgeons and researchers. It enables detailed analysis of long-axis
+lower limb radiographs, providing comprehensive alignment phenotyping using
+the MacDessi CPAK framework.
 
-📥 Loading a Case
+    WORKSPACE OPERATIONS (The Study Window)
 
-To bypass hospital firewalls that block standard file uploads, ArthroMeasure supports three import methods:
+The main viewer is designed for high-magnification precision and flexibility
+within restricted hospital IT environments.
 
-	LOAD STUDY: Click the central dash-box to select a file from your local drive.
-	
-	CAPTURE WINDOW: Click this button to select your PACS or imaging software window. The app will capture a high-resolution snapshot directly from your screen.
-	
-	PASTE (CTRL + V): Use any screen-snip tool (e.g., Win + Shift + S) to copy an image from your PACS, then simply press Ctrl + V anywhere on the app to load it instantly.
+LOADING A CASE:
 
-🕹️ Navigation & Interaction HUD
+    LOAD STUDY: Click the central dash-box to select a file from your local drive.
 
-Once a study is loaded, use these commands to navigate:
-	SCROLL: Zoom in/out. Landmark markers are anatomically anchored; they scale 1:1 with the image to maintain accuracy at any magnification.
-	RIGHT-CLICK + DRAG: Pan across the long-axis image.
-	360° RADIAL HANDLE: Hover over any landmark to see the white resize handle. Drag this handle from any angle to scale the marker. The handle becomes a "Ghost Handle" (40% translucent) when clicked to ensure cortical edges remain visible.
+    CAPTURE WINDOW: Select your PACS or imaging software window. The app will
+    capture a high-resolution snapshot directly from your screen.
 
-🔘 Functional Buttons
-	TOP RIGHT (Reset icon): Completely clears the current study and resets all landmark data, returning the app to the initial load screen.
-	 BOTTOM RIGHT (Maximize icon): Instantly resets the zoom and pan to fit the entire radiograph within the viewing window.
+    PASTE (CTRL + V): Use a screen-snip tool (e.g., Win + Shift + S) to copy an
+    image from your PACS, then press Ctrl + V on the app to load it instantly.
 
-📋 Clinical Workflow
-	Limb Lateralization: Select Left or Right in the sidebar. This calibrates the aHKA mathematical logic to ensure Varus/Valgus values are correctly signed.
-	Acquisition: Follow the prompted 10-point sequence:
-		P1: Center of Femoral Head (best-fit circle).
-		P2 & P3: Proximal & Distal Femoral Shaft (medullary centers).
-		P4: Femoral Knee Center (apex of intercondylar notch).
-		MFC & LFC: Medial & Lateral Femoral Condyles (most distal points).
-		P5: Tibial Knee Center (midpoint of tibial spines).
-		MTP & LTP: Medial & Lateral Tibial Plateaus (articular centers).
-		P6: Ankle Center (talar dome midpoint).
-	Refinement: Hover over sidebar landmarks to highlight bone points; use radial handles to fit markers to anatomy.
-	Diagnostic Analysis: Review the unified 7-row clinical table and the automated MacDessi CPAK classification (Type I - IX).
-	Data Export: Click "Export Study" to copy the full clinical report to the clipboard.
+NAVIGATION & INTERACTION:
 
-📐 Clinical Metrics Output
-	HKA: Hip-Knee-Ankle Angle (Mechanical Alignment)
-	AMA: Anatomic-Mechanical Angle (VCA/Jig Planning)
-	mLDFA: Mechanical Lateral Distal Femoral Angle
-	mMPTA: Mechanical Medial Proximal Tibial Angle
-	JLCA: Joint Line Congruency Angle
-	aHKA: Arithmetic HKA (Constitutional Bony Alignment)
-	JLO: Joint Line Obliquity (Global Joint Tilt)
-	CPAK: MacDessi Phenotype Classification (Type and Clinical Description)
+    SCROLL: Zoom in and out. Markers scale 1:1 with the image to maintain accuracy.
 
-🛠️ Technical Stack
-	Framework: React 19
-	Styling: Tailwind CSS 4
-	Icons: Lucide-React
-	 Build Tool: Vite
+    RIGHT-CLICK + DRAG: Pan across the long-axis image.
 
-Disclaimer: ArthroMeasure - Knee is intended for research and educational purposes only. All clinical decisions must be made based on comprehensive professional evaluation by a qualified medical professional.
+    360 RADIAL HANDLE: Hover over any landmark to see the white resize handle.
+    Drag this from any angle to scale the marker. The handle becomes a
+    "Ghost Handle" (40% translucent) when clicked to keep the bone visible.
+
+FUNCTIONAL BUTTONS:
+
+    TOP RIGHT (Reset Icon): Clears the study and all landmark data.
+
+    BOTTOM RIGHT (Maximize Icon): Resets zoom/pan to fit the image to the window.
+
+    CLINICAL WORKFLOW
+
+    LATERALIZATION: Select "Left" or "Right" in the sidebar to calibrate the
+    mathematical logic for Varus/Valgus signing.
+
+    ACQUISITION: Follow the prompted 10-point sequence:
+
+        P1: Center of Femoral Head (best-fit circle).
+
+        P2 & P3: Proximal & Distal Femoral Shaft (medullary centers).
+
+        P4: Femoral Knee Center (intercondylar notch apex).
+
+        MFC & LFC: Medial & Lateral Femoral Condyles (most distal points).
+
+        P5: Tibial Knee Center (midpoint of tibial spines).
+
+        MTP & LTP: Medial & Lateral Tibial Plateaus (articular centers).
+
+        P6: Ankle Center (talar dome midpoint).
+
+    REFINEMENT: Hover over sidebar landmark names to pulse the corresponding
+    point on the image; use radial handles to fit markers to anatomy.
+
+    ANALYSIS: Review the unified 7-row clinical table and CPAK classification.
+
+    EXPORT: Click "Export Study" to copy the full report to your clipboard.
+
+    CLINICAL METRICS OUTPUT
+
+    HKA: Hip-Knee-Ankle Angle (Mechanical Alignment)
+
+    AMA: Anatomic-Mechanical Angle (VCA/Jig Planning)
+
+    mLDFA: Mechanical Lateral Distal Femoral Angle
+
+    mMPTA: Mechanical Medial Proximal Tibial Angle
+
+    JLCA: Joint Line Congruency Angle
+
+    aHKA: Arithmetic HKA (Constitutional/Bony Alignment)
+
+    JLO: Joint Line Obliquity (Global Joint Tilt)
+
+    CPAK: MacDessi Phenotype Classification (Type I - IX)
+
+    TECHNICAL SPECIFICATIONS
+
+    Framework: React 19
+
+    Styling: Tailwind CSS 4
+
+    Icons: Lucide-React
+
+    Build Tool: Vite
+
+DISCLAIMER: ArthroMeasure - Knee is intended for research and educational
+purposes only. All clinical decisions must be made based on comprehensive
+professional evaluation by a qualified medical professional.
