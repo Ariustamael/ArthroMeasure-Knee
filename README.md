@@ -6,8 +6,11 @@ ArthroMeasure - Knee is a high-precision clinical drafting tool designed for ort
 📥 Loading a Case
 
 To bypass hospital firewalls that block standard file uploads, ArthroMeasure supports three import methods:
+
 	LOAD STUDY: Click the central dash-box to select a file from your local drive.
+	
 	CAPTURE WINDOW: Click this button to select your PACS or imaging software window. The app will capture a high-resolution snapshot directly from your screen.
+	
 	PASTE (CTRL + V): Use any screen-snip tool (e.g., Win + Shift + S) to copy an image from your PACS, then simply press Ctrl + V anywhere on the app to load it instantly.
 
 🕹️ Navigation & Interaction HUD
